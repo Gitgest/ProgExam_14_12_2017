@@ -6,6 +6,9 @@
  * Time: 10:10
  */
 
+/* Denne api er RESTFUL fordi den fungerer som mellem station mellem browser og server, browseren ved ikke hvor
+    informationerne skal sendes hen, det er API'ens opgave.*/
+
 //Get the HTTP method and body of the request
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));

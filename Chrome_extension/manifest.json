@@ -1,0 +1,14 @@
+{
+  "name": "ProgExam_chrome_extension",
+  "description":"An extension which should show information from the tours json via the api",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup":"popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "http://localhost/ProgExam_14_12_2017/explore_california_api.php"
+  ]
+}

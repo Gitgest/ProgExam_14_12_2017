@@ -62,7 +62,7 @@ echo "<p1>Tours table</p1>
             tour keywords
             </th>
             <th>
-                tour description
+                tour graphic
             </th>
             <th>
                 package title
@@ -81,7 +81,7 @@ echo "<p1>Tours table</p1>
             tours.description,
             tours.price,
             tours.keywords,
-            tours.blurb,
+            tours.graphic,
             packages.packageTitle,
             packages.packageDescription,
             packages.packageGraphic
@@ -94,6 +94,14 @@ echo "<p1>Tours table</p1>
         while ($row = mysqli_fetch_array($result))
         {
             echo "<tr>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['tourName'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['description'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['price'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['keywords'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['graphic'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['packageTitle'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['packageDescription'] . "</td>";
+            echo "<td style='border: 1px solid darkgreen'>" . $row['packageGraphic'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";

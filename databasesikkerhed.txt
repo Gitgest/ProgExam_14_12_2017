@@ -1,0 +1,22 @@
+PREPARED STATEMENTS
+For at sikre en database mod sql injections kan man gøre det sværer for en eventuel hacker ved at bruge 'prepared
+statements'.
+
+Et prepared statement til databasen kunne f.eks være
+
+INSERT INTO tours (price, keywords, tourName) VALUES ( ?, ?, ? );
+$stmt -> bind_param("iss", $price, $keywords, $tourName);
+
+Dette gør det mere besværligt at foretage SQL injections da mysql via dette ved hvilke typer data den skal forvente.
+
+Når ovenstående kode skal eksekveres ville man initializere parameterne $price, $keywords og $tourName.
+For til sidst at køre en stmt->execute();
+
+STORED PROCEDURES
+stored procedures er hvor SQL koden der skal eksekveres ligge inde i selve databasen
+Dette kunne gøres ved hvis man f.eks. ville gemme SELECT * FROM tours som en 'stored procedure' i mysql
+
+CREATE PROCEDURE see_all_tours()
+BEGIN
+SELECT * FROM tours;
+END
