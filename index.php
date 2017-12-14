@@ -13,8 +13,6 @@
  * Time: 09:16
  */
 
-
-
 echo "<h1>See tours</h1>";
 
 // server information
@@ -96,14 +94,6 @@ echo "<p1>Tours table</p1>
         while ($row = mysqli_fetch_array($result))
         {
             echo "<tr>";
-            echo "<td style='border:1px solid;'>" . $row['tourName'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['description'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['price'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['keywords'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['blurb'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['packageTitle'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['packageDescription'] . "</td>";
-            echo "<td style='border:1px solid;'>" . $row['packageGraphic'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
