@@ -40,7 +40,7 @@ FROM
 	admin;";
 $resultadmin = $conn->query($sqladmin);
 
-if($_POST["Username"]!=$resultadmin.userName || $_POST["Password"]!=$resultadmin.$password){
+if($_POST["Username"]!=$resultadmin.userName || $_POST["Password"]!=$resultadmin.password){
     echo "Username or Password my be incorrect try again ";
     echo "<button onclick='window.history.back()'> Try login again </button>";
 }
